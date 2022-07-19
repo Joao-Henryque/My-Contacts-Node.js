@@ -26,7 +26,7 @@ class CategoryRepository {
     VALUES($1)
     RETURNING *
     `,
-      [name],
+      [name.toLowerCase()],
     );
 
     return row;
